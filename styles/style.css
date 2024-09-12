@@ -1,0 +1,50 @@
+    * {
+        box-sizing: border-box;
+    }
+
+    table, th, tr {
+        text-align: center;
+        padding: auto;
+        border-collapse: collapse;
+        border:1px solid black
+        
+        
+    }
+    footer {
+        color:white;
+        background-color: #000000;
+        padding:10px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+        font-size: xx-large;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    a:hover {
+        color: blue;
+    }
+    .num {
+        
+        color:white;
+    }
+    .navigator{
+        
+        color:black
+
+    }
+
+    html {
+    scroll-behavior: smooth;    
+
+    }
+
+    header, footer, main, nav {
+        margin: 5%;
+        padding: 0%;
+        font-size: xx-large;
+    }
+
+    img {
+        width: 900;
+    }
