@@ -3,90 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Food Construct - Главная</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1> 
-            Food Сonstruct
-        </h1>
-        <div class="navigator">
-
-        <nav>
-            <a href="#about">О нас</a>
-            <a href="#">Собрать ланч</a>
-            <a href="#">Заказы</a>
+        <h1>Food Сonstruct</h1>
+        <nav class="navigator">
+            <a href="index.html" id="active">О нас</a>
+            <a href="menu.html">Собрать ланч</a>
+            <a href="zakaz.html">Заказы</a>
             <a href="#Contact">Контакты</a>
         </nav>
-    </div>
     </header>
 
     <main>
         <section id="about">
-            <img src="images/havchik.webp" alt="фото еды">
-            <h2>
-                О нас
-            </h2>
-            <p>
-                Food construct - доставка бизнес ланчей в Москве. Мы привезём вам горячую вкусную еду в любую точку города к назначенному времени.
-            </p>
-            <h2>Преимущества Food Construct</h2>
+            <img src="images/havchik.webp" alt="">
+            <h2>О нас</h2>
+            <p>Food Construct - доставка бизнес ланчей в Москве. Мы привезём вам горячую вкусную еду в любую точку города к назначенному времени.</p>
+            <h2>Преимущества</h2>
             <ul>
-                <li>Привозим обед к назначенному времени без опазданий</li>
-                <li>Надёжно упаковываем блюда в удобные контейнеры бесплатно</li>
-                <li>Доставляем ланчи весь день с 7:00 до 23:00</li>
+                <li>Привозим обед к назначенному времени без опозданий</li>
+                <li>Удобная упаковка бесплатно</li>
+                <li>Доставляем с 7:00 до 23:00</li>
             </ul>
-
             <h2>Топ-5 популярных блюд</h2>
             <table>
-                <tr>
-                    <th></th>
-                    <th>Название</th>
-                    <th>Кол-во заказов в неделю</th>
-                    <th>Цена</th>
-                </tr>
-                <tr>
-                    <th>1</th>
-                    <th>Лазанья</th>
-                    <th>185</th>
-                    <th>385</th>
-                </tr>
-                <tr>
-                    <th>2</th>
-                    <th>Том Ям с креветками</th>
-                    <th>161</th>
-                    <th>365</th>
-                </tr>
-                <tr>
-                    <th>3</th>
-                    <th>Норвежский суп</th>
-                    <th>144</th>
-                    <th>270</th>
-                </tr>
-                <tr>
-                    <th>4</th>
-                    <th>Жареная картошка с грибами</th>
-                    <th>132</th>
-                    <th>150</th>
-                </tr>
-                <tr>
-                    <th>5</th>
-                    <th>Котлеты из курицы с картофельным пюре</th>
-                    <th>128</th>
-                    <th>225</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>Название</th>
+                        <th>Заказов в неделю</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td>Лазанья</td><td>185</td><td>385</td></tr>
+                    <tr><td>2</td><td>Том Ям</td><td>161</td><td>365</td></tr>
+                    <tr><td>3</td><td>Норвежский суп</td><td>144</td><td>270</td></tr>
+                    <tr><td>4</td><td>Картошка с грибами</td><td>132</td><td>150</td></tr>
+                    <tr><td>5</td><td>Куриные котлеты</td><td>128</td><td>225</td></tr>
+                </tbody>
             </table>
         </section>
     </main>
-    <footer id = "Contact">
-        <p>
-            Позвонить нам
-            <a class="num" href="#">+8-800-222-35-35</a>
-            
-        </p>
-        
+
+    <footer id="Contact">
+        <p>Позвонить нам: <a class="num" href="#">+8-800-222-35-35</a></p>
     </footer>
 </body>
-
 </html>

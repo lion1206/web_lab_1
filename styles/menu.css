@@ -1,0 +1,123 @@
+.dishes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    background-color: white;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+}
+
+.main_dishes .salad_starter .drinks .desert {
+    margin: 10px;
+}
+
+.dish:hover {
+    border: 2px solid tomato;
+}
+
+.dish:hover button {
+    background-color: tomato;
+}
+
+.dish img {
+    width: 100%;
+    
+    border-radius: 35px;
+}
+
+.dish p {
+    margin: 10px 0;
+}
+
+.dish p:nth-child(2) {
+    font-size: larger;
+}
+
+.dish p:nth-child(3) {
+    font-size: larger;
+}
+
+.dish p:nth-child(4) {
+    color: grey;
+}
+
+button {
+    background-color: #f1eee9;
+    margin-top: 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: tomato;
+}
+
+#notification-text{
+    margin-bottom: 30px;
+    margin-top: 20px;
+    white-space: pre-line;
+}
+
+
+#notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    color: black;
+    border: 1px solid black;
+    text-align: center; /* Центрирование текста */
+}
+
+#notification.hidden {
+    display: none;
+}
+
+#notification-button {
+    /* Стили для кнопки */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white; /* Зеленый */
+    color: black;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход */
+}
+#notification-button:hover {
+    background-color: tomato; /* Более темный зеленый при наведении */
+}
+/* style.css */
+#notification {
+    max-width: 90%; /* Адаптивная ширина */
+    box-sizing: border-box;  /* Чтобы padding не увеличивал общую ширину */
+}
+
+
+/* Адаптивность */
+@media (max-width: 800px) {
+    .dishes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .dishes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .h2 {
+        text-align: center;
+    }
+}

@@ -1,0 +1,36 @@
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
+.order-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.client-section {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.client-section p {
+    margin-bottom: 1px;
+}
+
+.client-section fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-width: 0px;
+    text-align: left;
+    padding: 0%;
+}
+
+.client-section textarea, select {
+    width: 100%;
+}
+

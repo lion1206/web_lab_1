@@ -1,0 +1,32 @@
+.kombo_all {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.kombo {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.dish_kombo {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0%;
+}
+
+.emoji {
+    font-size: xx-large;
+}
+
+.dish_kombo:hover {
+    transform: scale(1.2);
+}
+
+.dish_kombo p:nth-child(2) {
+    font-size: small;
+}

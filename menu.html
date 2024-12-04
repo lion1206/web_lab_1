@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Собрать ланч</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/kombo.css">
+    <script src="scripts/display.js"></script>
+    <script src="scripts/order.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Food Сonstruct</h1>
+        <nav class="navigator">
+            <a href="index.html">О нас</a>
+            <a href="menu.html" id="active">Собрать ланч</a>
+            <a href="zakaz.html">Заказы</a>
+            <a href="#Contact">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+
+    <section id="kombo_section">
+        <h2>Доступные для заказа комбо</h2>
+        <div class="kombo_all">
+            <div class="kombo">
+                <div class="dish_kombo">
+                    <p class="emoji">🥘</p>
+                    <p>Суп</p>
+                </div>
+                <div class="dish_kombo">
+                    <p class="emoji">🍲</p>
+                    <p>Главное блюдо</p>
+                </div>
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🥗</p>
+                    <p>Салат</p>
+                </div>
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🍹</p>
+                    <p>Напиток</p>
+                </div>    
+            </div>
+
+            <div class="kombo">
+                <div class="dish_kombo">
+                    <p class="emoji">🥘</p>
+                    <p>Суп</p>
+                </div>
+                <div class="dish_kombo">
+                    <p class="emoji">🍲</p>
+                    <p>Главное блюдо</p>
+                </div>
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🍹</p>
+                    <p>Напиток</p>
+                </div>    
+            </div>
+
+            <div class="kombo">
+                <div class="dish_kombo">
+                    <p class="emoji">🥘</p>
+                    <p>Суп</p>
+                </div>
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🥗</p>
+                    <p>Салат</p>
+                </div>
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🍹</p>
+                    <p>Напиток</p>
+                </div>    
+            </div>
+
+            <div class="kombo">
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🍲</p>
+                    <p>Главное блюдо</p>
+                </div>
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🥗</p>
+                    <p>Салат</p>
+                </div>
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🍹</p>
+                    <p>Напиток</p>
+                </div>    
+            </div>
+
+            <div class="kombo">
+                <div class="dish_kombo">
+                    <p class="emoji">🍲</p>
+                    <p>Главное блюдо</p>
+                </div>
+                
+                <div class="dish_kombo">
+                    <p class="emoji">🍹</p>
+                    <p>Напиток</p>
+                </div>    
+            </div>
+
+            <div class="kombo">
+                <div class="dish_kombo">
+                    <p class="emoji">🍰</p>
+                    <p>Десерт</p>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+        
+  <section id="soups">
+    <h2>Супы</h2>
+    <div class="filters">
+      <button class="filter-btn" data-kind="fish">Рыбные</button>
+      <button class="filter-btn" data-kind="meat">Мясные</button>
+      <button class="filter-btn" data-kind="veg">Вегетарианские</button>
+    </div>
+    <div class="dishes">
+
+    </div>
+  </section>
+
+  
+  <section id="main_dishes">
+    <h2>Основные блюда</h2>
+    <div class="filters">
+      <button class="filter-btn" data-kind="fish">Рыбные</button>
+      <button class="filter-btn" data-kind="meat">Мясные</button>
+      <button class="filter-btn" data-kind="veg">Вегетарианские</button>
+    </div>
+    <div class="dishes">
+      
+
+    </div>
+  </section>
+  <section id="salad_starter">
+    <h2>Салат или стартер</h2>
+    <div class="filters">
+      <button class="filter-btn" data-kind="fish">Рыбные</button>
+      <button class="filter-btn" data-kind="meat">Мясные</button>
+      <button class="filter-btn" data-kind="veg">Вегетарианские</button>
+    </div>
+    <div class="dishes">
+
+    </div>
+  </section>
+  
+  <section id="drinks">
+    <h2>Напитки</h2>
+    <div class="filters">
+      <button class="filter-btn" data-kind="heat">Горячий</button>
+      <button class="filter-btn" data-kind="cold">Холодный</button>
+    </div>
+    <div class="dishes">
+
+    </div>
+  </section>
+     
+
+  <section id="desert">
+    <h2>Десерт</h2>
+    <div class="filters">
+      <button class="filter-btn" data-kind="small">Маленькая порция</button>
+      <button class="filter-btn" data-kind="medium">Средняя порция</button>
+      <button class="filter-btn" data-kind="large">Большая порция</button>
+    </div>
+    <div class="dishes">
+    </div>
+  </section>
+
+
+
+
+    </main>
+
+    <footer id="Contact">
+        <p>Позвонить нам: <a class="num" href="#">+8-800-222-35-35</a></p>
+    </footer>
+
+    <div id="notification" class="notification hidden">
+      <p id="notification-text"></p>
+      <button id="notification-button">Окей &#128076;
+      </button>
+    </div>
+
+</body>
+</html>
