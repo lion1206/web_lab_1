@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     const saladSection = document.querySelector('#salad_starter .dishes');
     const desertSection = document.querySelector('#desert .dishes');
     const resetButton = document.getElementById('resetButton');
-    const apiUrl = 'http://lab7-api.std-900.ist.mospolytech.ru/api/dishes';
-
+    const API_URL = 'https://edu.std-900.ist.mospolytech.ru/labs/api/dishes';
+    const API_KEY = '718bd00f-b733-4023-ad8e-c36e96a11df4'
 
     try {
-        const response = await fetch(apiUrl);
+        const response = await fetch(`${API_URL}?api_key=${API_KEY}`);
         if (!response.ok) {
             throw new Error(`Ошибка HTTP: ${response.status}`);
         }
@@ -44,20 +44,18 @@ document.addEventListener("DOMContentLoaded", async () => {
             }
 
             dishElement.querySelector('button').addEventListener('click', () => {
-                addToOrder(dish);
+                let old_dish = getSelectedDishes();
+                old_dish.forEach(exdish => {
+                        if (exdish.category === dish.category) {
+                            localStorage.removeItem(exdish.id);
+                            saveToLocalStorage();
+                        }
+                })
+                addToOrder(dish.id);
             });
         });
 
-        resetButton.addEventListener('click', () => {
-            order = {
-                soup: null,
-                "main-course": null, //здесь main_dish
-                salad: null, //здесь salad_starter
-                drink: null,
-                dessert: null //здесь desert
-            };
-            updateOrderDisplay();
-        });
+
 
     } catch (error) {
         console.error("Ошибка при загрузке данных:", error);

@@ -1,15 +1,49 @@
-let order = {
-    soup: null,
-    "main-course": null,
-    salad: null,
-    drink: null,
-    dessert: null
-};
+document.addEventListener("DOMContentLoaded", async => {
+    const select = document.querySelector('#order-summary .dishes');
+    const API_URL = 'https://edu.std-900.ist.mospolytech.ru/labs/api/dishes';
+    const API_KEY = '718bd00f-b733-4023-ad8e-c36e96a11df4'
 
-function addToOrder(dish) {
-    order[dish.category] = dish;
-    updateOrderDisplay();
+    try {
+        order = {
+            soup: null,
+            "main-course": null,
+            salad: null,
+            drink: null,
+            dessert: null
+        };
+
+        
+
+        const selected = getSelectedDishes();
+        selected.forEach(async id => {
+            const response =  await fetch(`${API_URL}/${id}?api_key=${API_KEY}`);
+            if (!response.ok) {
+                throw new Error(`Ошибка HTTP: ${response.status}`);
+            }
+            const dish = await response.json();
+            const dishElement = document.createElement('div');
+            dishElement.classList.add('dish');
+            dishElement.setAttribute('data-dish', dish.keyword);
+            dishElement.setAttribute('data-kind', dish.kind);
+            dishElement.innerHTML = `
+              <img src="${dish.image}" alt="${dish.name}">
+              <p>Цена: ${dish.price}₽</p>
+              <p>${dish.name}</p>
+              <p>Вес: ${dish.count}</p>
+              <button>Удалить</button>
+            `;
+
+            select.appendChild(dishElement);
+        order[dish.category] = dish;
+        updateOrderDisplay();
+        })
+        
+
+} catch (error) {
+        console.error("Ошибка при загрузке данных:", error);
 }
+})
+
 
 function updateOrderDisplay() {
     const orderSection = document.querySelector('.order-section');
@@ -51,6 +85,8 @@ function updateOrderDisplay() {
         <textarea id="comment" name="comment" rows="4"></textarea>
       `;
     }
+
+
 }
 
 function checkOrder() {

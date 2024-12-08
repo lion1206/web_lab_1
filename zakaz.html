@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Оформить заказ</title>
     <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/form.css">
+    
+    <script src="scripts/localStorage.js" defer></script>
     <script src="scripts/order.js" defer></script>
-    <script src="scripts/display.js" defer></script>
     
 </head>
 <body>
@@ -26,11 +27,8 @@
 
         <section id="order-summary">
             <h2>Состав заказа</h2>
-            <div id="selected-dishes" class="dishes"></div>
-            <p id="no-dishes-message" class="hidden">
-                Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу 
-                <a href="menu.html">Собрать ланч</a>.
-            </p>
+            <div class="dishes"></div>
+            
         </section>
         
         <div class="order-form">
